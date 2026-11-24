@@ -1,0 +1,9 @@
+project: savantenvs/tvision
+target: fuzz_resfile
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_resfile/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_resfile
+    libfuzzer: true
+    timeout: 5

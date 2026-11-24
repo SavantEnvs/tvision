@@ -1,0 +1,9 @@
+project: savantenvs/tvision
+target: fuzz_editor
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_editor/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_editor
+    libfuzzer: true
+    timeout: 5
